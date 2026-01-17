@@ -2,7 +2,7 @@
 
 ### Neural Aspect-Based Filtering + Collaborative Filtering (SVD)
 
-This project implements a **Hybrid Recommendation Engine** that combines the strengths of content-based "aspect" analysis with traditional Collaborative Filtering. By using a "Tiny" Neural Network, the system learns complex relationships between movie metadata (genres, keywords, overviews) and user preferences, which is then blended with Matrix Factorization (SVD) to provide highly personalized movie suggestions.
+This project implements a **Hybrid Recommendation Engine** that combines the strengths of content-based "aspect" analysis with traditional Collaborative Filtering. By using a Neural Network, the system learns complex relationships between movie metadata (genres, keywords, overviews) and user preferences, which is then blended with Matrix Factorization (SVD) to provide highly personalized movie suggestions.
 
 ## 🚀 Overview
 
@@ -25,7 +25,7 @@ Most recommendation systems suffer from either the "Cold Start" problem (Collabo
 ## 📂 Project Structure
 
 * `finaldataset.csv`: The core dataset containing `userId`, `movieId`, `rating`, `timestamp`, and metadata (`genres`, `keywords`, `overview`).
-* `recommendation_engine.py`: The main Python script containing the preprocessing, training, and evaluation logic.
+* `finalmodel.py`: The main Python script containing the preprocessing, training, and evaluation logic.
 * `tiny_aspect_nn_weights.pth`: Saved weights for the Neural Network, allowing for quick inference without retraining.
 
 ---
@@ -76,14 +76,16 @@ The model is evaluated using standard Information Retrieval metrics:
 pip install pandas numpy torch scikit-learn
 
 ```
-
-
-2. **Prepare Data:** Ensure `finaldataset.csv` is in the root directory.
-3. **Execute:**
+2. **Dataset Link:** 
+```bash
+https://drive.google.com/file/d/1vmlickoS6YJQiVeaBSAv0xMBJ4eF6kWa/view?usp=sharing
+```
+3. **Prepare Data:** Ensure `finaldataset.csv` is in the root directory.
+4. **Execute:**
 ```bash
 python recommendation_engine.py
 
 ```
 
 
-4. **Get Recommendations:** When prompted, enter a `User ID` to see a personalized list of 5 movies and their calculated hybrid scores.
+5. **Get Recommendations:** When prompted, enter a `User ID` to see a personalized list of 5 movies and their calculated hybrid scores.
