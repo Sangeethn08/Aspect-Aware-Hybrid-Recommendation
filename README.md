@@ -1,4 +1,4 @@
-# Hybrid Movie Recommendation System
+# Hybrid Neural-Aspect Movie Recommendation System
 
 ### Neural Aspect-Based Filtering + Collaborative Filtering (SVD)
 
