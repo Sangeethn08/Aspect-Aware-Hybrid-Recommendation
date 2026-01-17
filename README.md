@@ -25,7 +25,7 @@ Most recommendation systems suffer from either the "Cold Start" problem (Collabo
 ## 📂 Project Structure
 
 * `finaldataset.csv`: The core dataset containing `userId`, `movieId`, `rating`, `timestamp`, and metadata (`genres`, `keywords`, `overview`).
-* `finalmodel.py`: The main Python script containing the preprocessing, training, and evaluation logic.
+* `finalmodel.ipynb`: The main Python script containing the preprocessing, training, and evaluation logic.
 * `tiny_aspect_nn_weights.pth`: Saved weights for the Neural Network, allowing for quick inference without retraining.
 
 ---
@@ -36,7 +36,7 @@ Most recommendation systems suffer from either the "Cold Start" problem (Collabo
 
 The system cleans the textual metadata and uses a regex-based approach to extract meaningful bigrams (word pairs). These "aspects" are then converted into a numerical format using a **TF-IDF Vectorizer** (Term Frequency-Inverse Document Frequency), limited to the top 1,000 features to maintain performance.
 
-### 2. The Tiny Neural Network (TinyNN)
+### 2. Neural Network
 
 Instead of simple linear similarity, we use a Feed-Forward Neural Network with:
 
@@ -83,8 +83,7 @@ https://drive.google.com/file/d/1vmlickoS6YJQiVeaBSAv0xMBJ4eF6kWa/view?usp=shari
 3. **Prepare Data:** Ensure `finaldataset.csv` is in the root directory.
 4. **Execute:**
 ```bash
-python recommendation_engine.py
-
+Click run all cells button
 ```
 
 
